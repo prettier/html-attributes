@@ -159,6 +159,7 @@
     "align",
     "allow",
     "allowfullscreen",
+    "allowpaymentrequest",
     "frameborder",
     "height",
     "loading",

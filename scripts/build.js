@@ -178,14 +178,17 @@ function parseData(text) {
     col: ["align", "bgcolor", "char", "charoff", "valign", "width"],
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/colgroup#deprecated_attributes
     colgroup: ["align", "bgcolor", "char", "charoff", "valign", "width"],
-    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#deprecated_attributes
     iframe: [
+      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#deprecated_attributes
       "align",
       "frameborder",
       "longdesc",
       "marginheight",
       "marginwidth",
       "scrolling",
+
+      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#allowpaymentrequest
+      "allowpaymentrequest",
     ],
   };
   const $ = cheerio.load(text);
