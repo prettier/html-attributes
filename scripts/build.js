@@ -113,11 +113,6 @@ function* getElements(elementsCell, attribute) {
       tag = "source";
     }
 
-    assert(
-      htmlTags.includes(tag),
-      `Attribute '${attribute}': '${tag}' is not a valid html tag.`,
-    );
-
     yield tag;
   }
 }
@@ -145,6 +140,22 @@ function isGlobalAttribute(elementsCell) {
   return text.type === "text" && text.data === "HTML elements";
 }
 
+function getElementsTable($) {
+  for (let element = $("#elements-3")[0]; element; element = element.next) {
+    if (element.type === "tag" && element.name === "table") {
+      assert.equal(
+        $("thead tr:first-child th:nth-child(1)", element).text().trim(),
+        "Element",
+      );
+      assert.equal(
+        $("thead tr:first-child th:nth-child(6)", element).text().trim(),
+        "Attributes",
+      );
+      return element;
+    }
+  }
+}
+
 function parseData(text) {
   const attributes = {
     "*": [
@@ -155,14 +166,57 @@ function parseData(text) {
     ],
   };
   const $ = cheerio.load(text);
+  const addAttribute = (tag, attribute) => {
+    assert(
+      tag === "*" || htmlTags.includes(tag),
+      `Attribute '${attribute}': '${tag}' is not a valid html tag.`,
+    );
+    attributes[tag] ??= [];
+    attributes[tag].push(attribute);
+  };
 
-  for (const tr of $("#attributes-1 tbody tr")) {
-    let [attributeCell, elementsCell] = tr.children;
-    const attribute = getAttribute(attributeCell);
+  // Parse attributes table
+  {
+    const table = $("#attributes-1")[0];
+    for (const tr of $("tbody tr", table)) {
+      const [attributeCell, elementsCell] = tr.children;
+      const attribute = getAttribute(attributeCell);
 
-    for (const tag of getElements(elementsCell, attribute)) {
-      attributes[tag] ??= [];
-      attributes[tag].push(attribute);
+      for (const tag of getElements(elementsCell, attribute)) {
+        addAttribute(tag, attribute);
+      }
+    }
+  }
+
+  // Parse elements table
+  {
+    const table = getElementsTable($);
+    for (const tr of $("tbody tr", table)) {
+      const elementCell = tr.children[0];
+      const attributesCell = tr.children[5];
+      const tag = $(elementCell).text();
+
+      if (
+        tag === "MathML math" ||
+        tag === "SVG svg" ||
+        tag === "autonomous custom elements"
+      ) {
+        continue;
+      }
+
+      for (let anchor of $("a", attributesCell)) {
+        let attribute = $(anchor).text().trim();
+
+        if (attribute === "globals") {
+          continue;
+        }
+
+        if (tag === "body" && attribute.startsWith("on")) {
+          continue;
+        }
+
+        addAttribute(tag, attribute);
+      }
     }
   }
 
@@ -195,8 +249,7 @@ const attributes = Object.fromEntries(
           (attribute) => !globalAttributes.has(attribute),
         );
       }
-      assert.equal(new Set(attributes).size, attributes.length);
-      return [tag, attributes.toSorted()];
+      return [tag, [...new Set(attributes)].toSorted()];
     })
     .filter(([, attributes]) => attributes.length > 0),
 );

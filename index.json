@@ -132,6 +132,7 @@
     "method",
     "name",
     "novalidate",
+    "rel",
     "target"
   ],
   "iframe": [
