@@ -10,6 +10,7 @@ type HtmlTags =
   | 'bdo'
   | 'blockquote'
   | 'body'
+  | 'br'
   | 'button'
   | 'canvas'
   | 'col'

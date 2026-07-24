@@ -55,6 +55,11 @@ export default {
     "vlink",
   ],
 
+  br: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/br#deprecated_attributes
+    "clear",
+  ],
+
   col: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#deprecated_attributes
     "align",

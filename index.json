@@ -110,6 +110,9 @@
     "topmargin",
     "vlink"
   ],
+  "br": [
+    "clear"
+  ],
   "button": [
     "command",
     "commandfor",
