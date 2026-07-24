@@ -87,4 +87,8 @@ export default {
     "standby",
     "usemap",
   ],
+  ol: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ol#compact
+    "compact",
+  ],
 };

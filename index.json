@@ -294,11 +294,13 @@
     "form",
     "height",
     "name",
+    "standby",
     "type",
     "usemap",
     "width"
   ],
   "ol": [
+    "compact",
     "reversed",
     "start",
     "type"
