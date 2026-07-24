@@ -356,5 +356,11 @@ export default {
     "type",
   ],
 
+  ul: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ul#attributes
+    "compact",
+    "type",
+  ],
+
   ...table,
 };

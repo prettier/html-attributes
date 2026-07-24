@@ -78,6 +78,7 @@ type HtmlTags =
   | 'time'
   | 'tr'
   | 'track'
+  | 'ul'
   | 'video';
 
 /**

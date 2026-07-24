@@ -594,6 +594,10 @@
     "src",
     "srclang"
   ],
+  "ul": [
+    "compact",
+    "type"
+  ],
   "video": [
     "autoplay",
     "controls",
