@@ -204,6 +204,10 @@ function parseData(text) {
       "charset",
       "rev",
     ],
+    meta: [
+      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta
+      "scheme",
+    ],
   };
   const $ = cheerio.load(text);
   const addAttribute = (tag, attribute) => {

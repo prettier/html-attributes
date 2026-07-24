@@ -272,7 +272,8 @@
     "content",
     "http-equiv",
     "media",
-    "name"
+    "name",
+    "scheme"
   ],
   "meter": [
     "high",
