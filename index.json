@@ -330,10 +330,12 @@
   "script": [
     "async",
     "blocking",
+    "charset",
     "crossorigin",
     "defer",
     "fetchpriority",
     "integrity",
+    "language",
     "nomodule",
     "referrerpolicy",
     "src",

@@ -91,4 +91,9 @@ export default {
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ol#compact
     "compact",
   ],
+  script: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#deprecated_attributes
+    "charset",
+    "language",
+  ],
 };
