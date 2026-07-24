@@ -101,7 +101,13 @@
     "width"
   ],
   "col": [
-    "span"
+    "align",
+    "bgcolor",
+    "char",
+    "charoff",
+    "span",
+    "valign",
+    "width"
   ],
   "colgroup": [
     "span"
