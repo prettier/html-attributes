@@ -3,6 +3,7 @@ import * as cheerio from "cheerio";
 import { outdent } from "outdent";
 import assert from "node:assert/strict";
 import { htmlTags } from "@prettier/html-tags";
+import obsolete from "./obsolete.js";
 
 const CACHE_DIRECTORY = new URL("../.cache/", import.meta.url);
 
@@ -157,58 +158,7 @@ function getElementsTable($) {
 }
 
 function parseData(text) {
-  const attributes = {
-    "*": [
-      // https://drafts.csswg.org/css-shadow/#element-attrdef-html-global-exportparts
-      "exportparts",
-      // https://drafts.csswg.org/css-shadow/#part-attr
-      "part",
-    ],
-    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#deprecated_attributes
-    a: ["charset", "coords", "name", "rev", "shape"],
-    area: [
-      // https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element
-      "hreflang",
-      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/area
-      "nohref",
-      // https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element
-      "type",
-    ],
-    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#deprecated_attributes
-    col: ["align", "bgcolor", "char", "charoff", "valign", "width"],
-    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/colgroup#deprecated_attributes
-    colgroup: ["align", "bgcolor", "char", "charoff", "valign", "width"],
-    iframe: [
-      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#deprecated_attributes
-      "align",
-      "frameborder",
-      "longdesc",
-      "marginheight",
-      "marginwidth",
-      "scrolling",
-
-      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#allowpaymentrequest
-      "allowpaymentrequest",
-    ],
-    //https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#deprecated_attributes
-    img: ["align", "border", "hspace", "longdesc", "name", "vspace"],
-    input: [
-      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input
-      "align",
-    ],
-    link: [
-      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#non-standard_attributes
-      "target",
-
-      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#obsolete_attributes
-      "charset",
-      "rev",
-    ],
-    meta: [
-      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta
-      "scheme",
-    ],
-  };
+  const attributes = structuredClone(obsolete);
   const $ = cheerio.load(text);
   const addAttribute = (tag, attribute) => {
     assert(

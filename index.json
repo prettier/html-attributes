@@ -284,11 +284,18 @@
     "value"
   ],
   "object": [
+    "archive",
+    "border",
+    "classid",
+    "codebase",
+    "codetype",
     "data",
+    "declare",
     "form",
     "height",
     "name",
     "type",
+    "usemap",
     "width"
   ],
   "ol": [
