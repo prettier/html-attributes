@@ -125,6 +125,12 @@ export default {
     "longdesc",
   ],
 
+  frameset: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/frameset#attributes
+    "cols",
+    "rows",
+  ],
+
   iframe: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#deprecated_attributes
     "align",

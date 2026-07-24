@@ -29,6 +29,7 @@ type HtmlTags =
   | 'font'
   | 'form'
   | 'frame'
+  | 'frameset'
   | 'iframe'
   | 'img'
   | 'input'
