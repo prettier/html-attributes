@@ -37,6 +37,10 @@ export default {
     // https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element
     "type",
   ],
+
+  // https://www.geeksforgeeks.org/html/html-basefont-tag/
+  basefont: ["color", "face", "size"],
+
   col: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#deprecated_attributes
     "align",

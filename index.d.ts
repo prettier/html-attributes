@@ -6,6 +6,7 @@ type HtmlTags =
   | 'area'
   | 'audio'
   | 'base'
+  | 'basefont'
   | 'bdo'
   | 'blockquote'
   | 'button'

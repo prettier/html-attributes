@@ -90,6 +90,11 @@
     "href",
     "target"
   ],
+  "basefont": [
+    "color",
+    "face",
+    "size"
+  ],
   "blockquote": [
     "cite"
   ],
