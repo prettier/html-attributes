@@ -198,6 +198,7 @@
   ],
   "input": [
     "accept",
+    "align",
     "alpha",
     "alt",
     "autocomplete",
@@ -245,6 +246,7 @@
   "link": [
     "as",
     "blocking",
+    "charset",
     "color",
     "crossorigin",
     "disabled",
@@ -257,7 +259,9 @@
     "media",
     "referrerpolicy",
     "rel",
+    "rev",
     "sizes",
+    "target",
     "type"
   ],
   "map": [

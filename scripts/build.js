@@ -192,6 +192,18 @@ function parseData(text) {
     ],
     //https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#deprecated_attributes
     img: ["align", "border", "hspace", "longdesc", "name", "vspace"],
+    input: [
+      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input
+      "align",
+    ],
+    link: [
+      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#non-standard_attributes
+      "target",
+
+      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#obsolete_attributes
+      "charset",
+      "rev",
+    ],
   };
   const $ = cheerio.load(text);
   const addAttribute = (tag, attribute) => {
