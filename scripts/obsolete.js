@@ -174,6 +174,7 @@ export default {
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#allowpaymentrequest
     "allowpaymentrequest",
   ],
+
   img: [
     //https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#deprecated_attributes
     "align",
@@ -183,10 +184,30 @@ export default {
     "name",
     "vspace",
   ],
+
   input: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input
     "align",
   ],
+
+  // https://www.geeksforgeeks.org/html/html-isindex-tag/
+  isindex: ["prompt", "action"],
+
+  label: [
+    // https://www.w3schools.com/TAgs/att_label_form.asp
+    "form",
+  ],
+
+  legend: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/legend
+    "align",
+  ],
+
+  li: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/li#type
+    "type",
+  ],
+
   link: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#non-standard_attributes
     "target",
@@ -195,10 +216,17 @@ export default {
     "charset",
     "rev",
   ],
+
   meta: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta
     "scheme",
   ],
+
+  menu: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/menu#attributes
+    "compact",
+  ],
+
   object: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/object
     "archive",
@@ -214,9 +242,34 @@ export default {
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ol#compact
     "compact",
   ],
+
+  p: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/p#attributes
+    "align",
+  ],
+
+  param: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/param#attributes
+    "name",
+    "value",
+    "type",
+    "valuetype",
+  ],
+
+  pre: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/pre#attributes
+    "width",
+    "wrap",
+  ],
+
   script: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#deprecated_attributes
     "charset",
     "language",
+  ],
+
+  style: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/style#deprecated_attributes
+    "type",
   ],
 };

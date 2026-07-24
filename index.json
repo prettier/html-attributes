@@ -335,10 +335,19 @@
     "cite",
     "datetime"
   ],
+  "isindex": [
+    "action",
+    "prompt"
+  ],
   "label": [
-    "for"
+    "for",
+    "form"
+  ],
+  "legend": [
+    "align"
   ],
   "li": [
+    "type",
     "value"
   ],
   "link": [
@@ -364,6 +373,9 @@
   ],
   "map": [
     "name"
+  ],
+  "menu": [
+    "compact"
   ],
   "meta": [
     "charset",
@@ -418,6 +430,19 @@
     "form",
     "name"
   ],
+  "p": [
+    "align"
+  ],
+  "param": [
+    "name",
+    "type",
+    "value",
+    "valuetype"
+  ],
+  "pre": [
+    "width",
+    "wrap"
+  ],
   "progress": [
     "max",
     "value"
@@ -462,7 +487,8 @@
   ],
   "style": [
     "blocking",
-    "media"
+    "media",
+    "type"
   ],
   "td": [
     "colspan",
