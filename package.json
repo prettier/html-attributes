@@ -1,0 +1,61 @@
+{
+  "name": "@prettier/html-attributes",
+  "version": "0.0.0",
+  "description": "List of HTML attributes.",
+  "license": "MIT",
+  "repository": "prettier/html-attributes",
+  "author": {
+    "name": "fisker",
+    "email": "lionkay@gmail.com",
+    "url": "https://fiskercheung.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "require": "./index.json",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "fix": "prettier . --write",
+    "lint": "prettier . --check",
+    "build": "node scripts/build.js",
+    "test": "node --test test.js",
+    "test-coverage": "c8 yarn test",
+    "release": "release-it"
+  },
+  "files": [
+    "index.js",
+    "index.json",
+    "index.d.ts"
+  ],
+  "keywords": [
+    "html",
+    "event",
+    "handler",
+    "tag",
+    "name",
+    "attribute",
+    "property",
+    "w3c",
+    "whatwg"
+  ],
+  "devDependencies": {
+    "@prettier/html-tags": "^2.2.0",
+    "c8": "11.0.0",
+    "cheerio": "1.2.0",
+    "outdent": "0.8.0",
+    "prettier": "3.8.3",
+    "release-it": "20.2.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "c8": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
+}
