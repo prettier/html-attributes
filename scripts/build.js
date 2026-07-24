@@ -166,6 +166,14 @@ function parseData(text) {
     ],
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#deprecated_attributes
     a: ["charset", "coords", "name", "rev", "shape"],
+    area: [
+      // https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element
+      "hreflang",
+      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/area
+      "nohref",
+      // https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element
+      "type",
+    ],
   };
   const $ = cheerio.load(text);
   const addAttribute = (tag, attribute) => {

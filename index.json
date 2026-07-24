@@ -54,11 +54,14 @@
     "coords",
     "download",
     "href",
+    "hreflang",
+    "nohref",
     "ping",
     "referrerpolicy",
     "rel",
     "shape",
-    "target"
+    "target",
+    "type"
   ],
   "audio": [
     "autoplay",
