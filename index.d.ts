@@ -28,6 +28,7 @@ type HtmlTags =
   | 'fieldset'
   | 'font'
   | 'form'
+  | 'frame'
   | 'iframe'
   | 'img'
   | 'input'

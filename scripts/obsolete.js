@@ -111,6 +111,20 @@ export default {
     "accept",
   ],
 
+  frame: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/frame#attributes
+    "src",
+    "name",
+    "noresize",
+    "scrolling",
+    "marginheight",
+    "marginwidth",
+    "frameborder",
+
+    // https://www.w3.org/TR/html401/present/frames.html
+    "longdesc",
+  ],
+
   iframe: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#deprecated_attributes
     "align",

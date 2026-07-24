@@ -206,6 +206,16 @@
     "rel",
     "target"
   ],
+  "frame": [
+    "frameborder",
+    "longdesc",
+    "marginheight",
+    "marginwidth",
+    "name",
+    "noresize",
+    "scrolling",
+    "src"
+  ],
   "iframe": [
     "align",
     "allow",
