@@ -244,6 +244,7 @@
     "controls",
     "crossorigin",
     "decoding",
+    "elementtiming",
     "fetchpriority",
     "height",
     "hspace",

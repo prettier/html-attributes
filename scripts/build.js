@@ -4,6 +4,8 @@ import { outdent } from "outdent";
 import assert from "node:assert/strict";
 import { htmlTags } from "@prettier/html-tags";
 import obsolete from "./obsolete.js";
+import experimental from "./experimental.js";
+import { mergeAttributeData } from "./utilities.js";
 
 const CACHE_DIRECTORY = new URL("../.cache/", import.meta.url);
 
@@ -158,7 +160,7 @@ function getElementsTable($) {
 }
 
 function parseData(text) {
-  const attributes = structuredClone(obsolete);
+  const attributes = mergeAttributeData(obsolete, experimental);
   const $ = cheerio.load(text);
   const addAttribute = (tag, attribute) => {
     assert(

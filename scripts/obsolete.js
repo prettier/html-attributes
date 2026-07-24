@@ -1,4 +1,30 @@
+import { mergeAttributeData } from "./utilities.js";
+
 const table = {
+  caption: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/caption#deprecated_attributes
+    "align",
+  ],
+
+  col: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#deprecated_attributes
+    "align",
+    "bgcolor",
+    "char",
+    "charoff",
+    "valign",
+    "width",
+  ],
+  colgroup: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/colgroup#deprecated_attributes
+    "align",
+    "bgcolor",
+    "char",
+    "charoff",
+    "valign",
+    "width",
+  ],
+
   table: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table#deprecated_attributes
     "align",
@@ -81,7 +107,35 @@ const table = {
   ],
 };
 
-export default {
+const headings = {
+  // https://www.w3.org/TR/2010/WD-html-markup-20100624/h1.html
+  h1: ["align"],
+  h2: ["align"],
+  h3: ["align"],
+  h4: ["align"],
+  h5: ["align"],
+  h6: ["align"],
+};
+
+const list = {
+  li: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/li#type
+    "type",
+  ],
+
+  ol: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ol#compact
+    "compact",
+  ],
+
+  ul: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ul#attributes
+    "compact",
+    "type",
+  ],
+};
+
+const elements = {
   "*": [
     // https://drafts.csswg.org/css-shadow/#element-attrdef-html-global-exportparts
     "exportparts",
@@ -143,30 +197,6 @@ export default {
     "clear",
   ],
 
-  caption: [
-    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/caption#deprecated_attributes
-    "align",
-  ],
-
-  col: [
-    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#deprecated_attributes
-    "align",
-    "bgcolor",
-    "char",
-    "charoff",
-    "valign",
-    "width",
-  ],
-  colgroup: [
-    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/colgroup#deprecated_attributes
-    "align",
-    "bgcolor",
-    "char",
-    "charoff",
-    "valign",
-    "width",
-  ],
-
   dir: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dir#deprecated_attributes
     "compact",
@@ -213,14 +243,6 @@ export default {
     "cols",
     "rows",
   ],
-
-  // https://www.w3.org/TR/2010/WD-html-markup-20100624/h1.html
-  h1: ["align"],
-  h2: ["align"],
-  h3: ["align"],
-  h4: ["align"],
-  h5: ["align"],
-  h6: ["align"],
 
   head: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/head#attributes
@@ -286,11 +308,6 @@ export default {
     "align",
   ],
 
-  li: [
-    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/li#type
-    "type",
-  ],
-
   link: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#non-standard_attributes
     "target",
@@ -334,10 +351,6 @@ export default {
     // https://www.geeksforgeeks.org/html/html-object-align-attribute/
     "align",
   ],
-  ol: [
-    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ol#compact
-    "compact",
-  ],
 
   p: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/p#attributes
@@ -368,12 +381,8 @@ export default {
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/style#deprecated_attributes
     "type",
   ],
-
-  ul: [
-    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ul#attributes
-    "compact",
-    "type",
-  ],
-
-  ...table,
 };
+
+const attributes = mergeAttributeData(elements, table, headings, list);
+
+export default attributes;
