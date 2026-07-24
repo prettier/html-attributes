@@ -139,6 +139,20 @@ export default {
   h5: ["align"],
   h6: ["align"],
 
+  head: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/head#attributes
+    "profile",
+  ],
+
+  hr: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/hr#attributes
+    "align",
+    "color",
+    "noshade",
+    "size",
+    "width",
+  ],
+
   iframe: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#deprecated_attributes
     "align",
