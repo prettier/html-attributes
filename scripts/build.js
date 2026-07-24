@@ -255,6 +255,9 @@ await fs.writeFile(
 await fs.writeFile(
   new URL(`../index.d.ts`, import.meta.url),
   outdent`
+    type HtmlTags =
+    ${tags.map((tag) => `  | '${tag}'`).join("\n")};
+
     /**
     List of HTML global attributes.
 
@@ -282,7 +285,9 @@ await fs.writeFile(
     // }
     \`\`\`
     */
-    export const htmlAttributes: Record<string, readonly string[]>;
+    export const elementAttributes: {
+      readonly [Tag in HtmlTags]: readonly string[];
+    };
 
 	`,
 );
