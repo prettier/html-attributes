@@ -190,6 +190,8 @@ function parseData(text) {
       // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#allowpaymentrequest
       "allowpaymentrequest",
     ],
+    //https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#deprecated_attributes
+    img: ["align", "border", "hspace", "longdesc", "name", "vspace"],
   };
   const $ = cheerio.load(text);
   const addAttribute = (tag, attribute) => {

@@ -175,19 +175,25 @@
     "width"
   ],
   "img": [
+    "align",
     "alt",
+    "border",
     "controls",
     "crossorigin",
     "decoding",
     "fetchpriority",
     "height",
+    "hspace",
     "ismap",
     "loading",
+    "longdesc",
+    "name",
     "referrerpolicy",
     "sizes",
     "src",
     "srcset",
     "usemap",
+    "vspace",
     "width"
   ],
   "input": [
