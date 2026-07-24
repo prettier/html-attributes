@@ -131,6 +131,14 @@ export default {
     "rows",
   ],
 
+  // https://www.w3.org/TR/2010/WD-html-markup-20100624/h1.html
+  h1: ["align"],
+  h2: ["align"],
+  h3: ["align"],
+  h4: ["align"],
+  h5: ["align"],
+  h6: ["align"],
+
   iframe: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#deprecated_attributes
     "align",
