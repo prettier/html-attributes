@@ -58,7 +58,7 @@ import htmlAttributes from "@prettier/html-attributes";
 
 console.log(htmlAttributes);
 // => {
-//   '*': [ 'accesskey', 'autocapitalize',  …],
+//   '*': [ 'accesskey', 'autocapitalize', …],
 //   …,
 // }
 ```

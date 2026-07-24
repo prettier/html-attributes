@@ -146,7 +146,14 @@ function isGlobalAttribute(elementsCell) {
 }
 
 function parseData(text) {
-  const attributes = {};
+  const attributes = {
+    "*": [
+      // https://drafts.csswg.org/css-shadow/#element-attrdef-html-global-exportparts
+      "exportparts",
+      // https://drafts.csswg.org/css-shadow/#part-attr
+      "part",
+    ],
+  };
   const $ = cheerio.load(text);
 
   for (const tr of $("#attributes-1 tbody tr")) {
