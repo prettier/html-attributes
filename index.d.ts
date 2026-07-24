@@ -9,6 +9,7 @@ type HtmlTags =
   | 'basefont'
   | 'bdo'
   | 'blockquote'
+  | 'body'
   | 'button'
   | 'canvas'
   | 'col'

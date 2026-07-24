@@ -98,6 +98,18 @@
   "blockquote": [
     "cite"
   ],
+  "body": [
+    "alink",
+    "background",
+    "bgcolor",
+    "bottommargin",
+    "leftmargin",
+    "link",
+    "rightmargin",
+    "text",
+    "topmargin",
+    "vlink"
+  ],
   "button": [
     "command",
     "commandfor",

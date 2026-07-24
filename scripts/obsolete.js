@@ -41,6 +41,20 @@ export default {
   // https://www.geeksforgeeks.org/html/html-basefont-tag/
   basefont: ["color", "face", "size"],
 
+  body: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/body#deprecated_attributes
+    "alink",
+    "background",
+    "bgcolor",
+    "bottommargin",
+    "leftmargin",
+    "link",
+    "rightmargin",
+    "text",
+    "topmargin",
+    "vlink",
+  ],
+
   col: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#deprecated_attributes
     "align",
