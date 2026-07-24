@@ -221,26 +221,20 @@ const text = await getText(
   "https://html.spec.whatwg.org/multipage/indices.html",
 );
 
-const raw = parseData(text);
-assert.ok("*" in raw);
-const tags = [
-  "*",
-  ...Object.keys(raw)
-    .filter((tag) => tag !== "*")
-    .sort((a, b) => a.localeCompare(b)),
-];
+let { "*": globalAttributes, ...elementAttributes } = parseData(text);
+globalAttributes.sort();
+
+const tags = Object.keys(elementAttributes).toSorted();
 assert.ok(tags.length > 10);
 
-const globalAttributes = new Set(raw["*"]);
-
-const attributes = Object.fromEntries(
+elementAttributes = Object.fromEntries(
   tags
     .map((tag) => {
-      let attributes = raw[tag];
+      let attributes = elementAttributes[tag];
 
-      if (tag !== "*" && globalAttributes.has("title")) {
+      if (globalAttributes.includes("title")) {
         attributes = attributes.filter(
-          (attribute) => !globalAttributes.has(attribute),
+          (attribute) => !globalAttributes.includes(attribute),
         );
       }
       return [tag, [...new Set(attributes)].toSorted()];
@@ -249,34 +243,46 @@ const attributes = Object.fromEntries(
 );
 
 await fs.writeFile(
-  new URL(`../index.json`, import.meta.url),
-  JSON.stringify(attributes, undefined, 2) + "\n",
+  new URL(`../global.json`, import.meta.url),
+  JSON.stringify(globalAttributes, undefined, 2) + "\n",
+);
+
+await fs.writeFile(
+  new URL(`../element.json`, import.meta.url),
+  JSON.stringify(elementAttributes, undefined, 2) + "\n",
 );
 
 await fs.writeFile(
   new URL(`../index.d.ts`, import.meta.url),
   outdent`
-    type HtmlTags =
-    ${tags.map((tag) => `  | '${tag}'`).join("\n")};
-
     /**
-    List of HTML attributes.
+    List of HTML global attributes.
 
     @example
     \`\`\`
-    import htmlAttributes from "@prettier/html-attributes";
+    import {globalAttributes} from "@prettier/html-attributes";
 
-    console.log(htmlAttributes);
+    console.log(globalAttributes);
+    // => [ 'accesskey', 'autocapitalize',  …],
+    \`\`\`
+    */
+    export const globalAttributes: readonly string[];
+
+    /**
+    List of HTML element attributes.
+
+    @example
+    \`\`\`
+    import {elementAttributes} from "@prettier/html-attributes";
+
+    console.log(elementAttributes);
     // => {
-    //   '*': [ 'accesskey', 'autocapitalize', …],
+    //   'a': [ 'charset',  'coords' …],
     //   …,
     // }
     \`\`\`
     */
-    declare const htmlAttributes: {
-      readonly [Tag in HtmlTags]: readonly string[];
-    };
+    export const htmlAttributes: Record<string, readonly string[]>;
 
-    export default htmlAttributes;\n
 	`,
 );

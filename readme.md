@@ -22,11 +22,17 @@ yarn add @prettier/html-attributes
 ## Usage
 
 ```js
-import htmlAttributes from "@prettier/html-attributes";
+import {
+  globalAttributes,
+  elementAttributes,
+} from "@prettier/html-attributes";
 
-console.log(htmlAttributes);
+console.log(globalAttributes);
+// => [ 'accesskey', 'autocapitalize',  …],
+
+console.log(elementAttributes);
 // => {
-//   '*': [ 'accesskey', 'autocapitalize', …],
+//   'a': [ 'charset',  'coords' …],
 //   …,
 // }
 ```

@@ -26,7 +26,8 @@
   },
   "files": [
     "index.js",
-    "index.json",
+    "global.json",
+    "element.json",
     "index.d.ts"
   ],
   "keywords": [
