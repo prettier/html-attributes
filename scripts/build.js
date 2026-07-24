@@ -176,6 +176,8 @@ function parseData(text) {
     ],
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#deprecated_attributes
     col: ["align", "bgcolor", "char", "charoff", "valign", "width"],
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/colgroup#deprecated_attributes
+    colgroup: ["align", "bgcolor", "char", "charoff", "valign", "width"],
   };
   const $ = cheerio.load(text);
   const addAttribute = (tag, attribute) => {

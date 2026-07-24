@@ -110,7 +110,13 @@
     "width"
   ],
   "colgroup": [
-    "span"
+    "align",
+    "bgcolor",
+    "char",
+    "charoff",
+    "span",
+    "valign",
+    "width"
   ],
   "data": [
     "value"
