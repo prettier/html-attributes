@@ -35,12 +35,17 @@
     "writingsuggestions"
   ],
   "a": [
+    "charset",
+    "coords",
     "download",
     "href",
     "hreflang",
+    "name",
     "ping",
     "referrerpolicy",
     "rel",
+    "rev",
+    "shape",
     "target",
     "type"
   ],

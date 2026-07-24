@@ -164,6 +164,8 @@ function parseData(text) {
       // https://drafts.csswg.org/css-shadow/#part-attr
       "part",
     ],
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#deprecated_attributes
+    a: ["charset", "coords", "name", "rev", "shape"],
   };
   const $ = cheerio.load(text);
   const addAttribute = (tag, attribute) => {
