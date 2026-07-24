@@ -106,6 +106,11 @@ export default {
     "size",
   ],
 
+  form: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form#accept
+    "accept",
+  ],
+
   iframe: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#deprecated_attributes
     "align",
