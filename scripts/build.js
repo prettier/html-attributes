@@ -2,46 +2,9 @@ import fs from "node:fs/promises";
 import * as cheerio from "cheerio";
 import { outdent } from "outdent";
 import assert from "node:assert/strict";
-import { htmlTags } from "@prettier/html-tags";
 import obsolete from "./obsolete.js";
 import experimental from "./experimental.js";
-import { mergeAttributeData } from "./utilities.js";
-
-const CACHE_DIRECTORY = new URL("../.cache/", import.meta.url);
-
-const getText = async (url) => {
-  const cacheFile = new URL(
-    url.replaceAll(/[^a-zA-Z\d\.]/g, "-"),
-    CACHE_DIRECTORY,
-  );
-
-  let stat;
-
-  try {
-    stat = await fs.stat(cacheFile);
-  } catch {}
-
-  if (stat) {
-    if (Date.now() - stat.mtimeMs < /* 10 hours */ 10 * 60 * 60 * 1000) {
-      return fs.readFile(cacheFile, "utf8");
-    }
-
-    await fs.rm(cacheFile);
-  }
-
-  const response = await fetch(url);
-
-  if (!response.ok) {
-    throw new Error(`Fetch '${url}' failed.`);
-  }
-
-  const text = await response.text();
-
-  await fs.mkdir(CACHE_DIRECTORY, { recursive: true });
-  await fs.writeFile(cacheFile, text);
-
-  return text;
-};
+import { getText, mergeAttributeData, addAttribute } from "./utilities.js";
 
 function getAttribute(attributeCell) {
   assert(attributeCell.type === "tag" && attributeCell.name === "th");
@@ -162,14 +125,6 @@ function getElementsTable($) {
 function parseData(text) {
   const attributes = mergeAttributeData(obsolete, experimental);
   const $ = cheerio.load(text);
-  const addAttribute = (tag, attribute) => {
-    assert(
-      tag === "*" || htmlTags.includes(tag),
-      `Attribute '${attribute}': '${tag}' is not a valid html tag.`,
-    );
-    attributes[tag] ??= [];
-    attributes[tag].push(attribute);
-  };
 
   // Parse attributes table
   {
@@ -179,7 +134,7 @@ function parseData(text) {
       const attribute = getAttribute(attributeCell);
 
       for (const tag of getElements(elementsCell, attribute)) {
-        addAttribute(tag, attribute);
+        addAttribute(attributes, tag, attribute);
       }
     }
   }
@@ -211,7 +166,7 @@ function parseData(text) {
           continue;
         }
 
-        addAttribute(tag, attribute);
+        addAttribute(attributes, tag, attribute);
       }
     }
   }
