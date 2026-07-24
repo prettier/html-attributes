@@ -60,6 +60,11 @@ export default {
     "clear",
   ],
 
+  caption: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/caption#deprecated_attributes
+    "align",
+  ],
+
   col: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#deprecated_attributes
     "align",
@@ -78,6 +83,29 @@ export default {
     "valign",
     "width",
   ],
+
+  dir: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dir#deprecated_attributes
+    "compact",
+  ],
+
+  div: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/div
+    "align",
+  ],
+
+  dl: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dl#attributes
+    "compact",
+  ],
+
+  font: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/font#attributes
+    "color",
+    "face",
+    "size",
+  ],
+
   iframe: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#deprecated_attributes
     "align",

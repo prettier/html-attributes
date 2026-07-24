@@ -133,6 +133,9 @@
     "height",
     "width"
   ],
+  "caption": [
+    "align"
+  ],
   "col": [
     "align",
     "bgcolor",
@@ -166,6 +169,15 @@
     "closedby",
     "open"
   ],
+  "dir": [
+    "compact"
+  ],
+  "div": [
+    "align"
+  ],
+  "dl": [
+    "compact"
+  ],
   "embed": [
     "height",
     "src",
@@ -176,6 +188,11 @@
     "disabled",
     "form",
     "name"
+  ],
+  "font": [
+    "color",
+    "face",
+    "size"
   ],
   "form": [
     "accept-charset",
