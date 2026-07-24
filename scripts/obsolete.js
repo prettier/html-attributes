@@ -153,6 +153,15 @@ export default {
     "width",
   ],
 
+  html: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/html#attributes
+    "version",
+    "xmlns",
+
+    // https://www.w3.org/TR/2010/WD-html-markup-20100624/html.html
+    "manifest",
+  ],
+
   iframe: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#deprecated_attributes
     "align",

@@ -248,6 +248,11 @@
     "size",
     "width"
   ],
+  "html": [
+    "manifest",
+    "version",
+    "xmlns"
+  ],
   "iframe": [
     "align",
     "allow",

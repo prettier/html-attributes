@@ -38,6 +38,7 @@ type HtmlTags =
   | 'h6'
   | 'head'
   | 'hr'
+  | 'html'
   | 'iframe'
   | 'img'
   | 'input'
