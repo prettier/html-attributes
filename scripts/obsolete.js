@@ -13,6 +13,22 @@ export default {
     "rev",
     "shape",
   ],
+
+  // https://www.w3.org/TR/html401/struct/objects.html#edef-APPLET
+  applet: [
+    "codebase",
+    "code",
+    "name",
+    "archive",
+    "object",
+    "width",
+    "height",
+    "alt",
+    "align",
+    "hspace",
+    "vspace",
+  ],
+
   area: [
     // https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element
     "hreflang",

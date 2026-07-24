@@ -2,6 +2,7 @@ type HtmlTags =
   | '*'
   | 'a'
   | 'abbr'
+  | 'applet'
   | 'area'
   | 'audio'
   | 'base'

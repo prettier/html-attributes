@@ -49,6 +49,19 @@
     "target",
     "type"
   ],
+  "applet": [
+    "align",
+    "alt",
+    "archive",
+    "code",
+    "codebase",
+    "height",
+    "hspace",
+    "name",
+    "object",
+    "vspace",
+    "width"
+  ],
   "area": [
     "alt",
     "coords",
