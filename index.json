@@ -394,6 +394,7 @@
     "value"
   ],
   "object": [
+    "align",
     "archive",
     "border",
     "classid",
@@ -403,10 +404,13 @@
     "declare",
     "form",
     "height",
+    "hspace",
     "name",
     "standby",
     "type",
+    "typemustmatch",
     "usemap",
+    "vspace",
     "width"
   ],
   "ol": [

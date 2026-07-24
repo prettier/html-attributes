@@ -320,6 +320,19 @@ export default {
     "declare",
     "standby",
     "usemap",
+
+    // https://www.w3schools.com/tags/tag_object.asp
+    "typemustmatch",
+    "usemap",
+
+    // https://www.geeksforgeeks.org/html/html-object-hspace-attribute/
+    "hspace",
+
+    // https://www.geeksforgeeks.org/html/html-object-vspace-attribute/
+    "vspace",
+
+    // https://www.geeksforgeeks.org/html/html-object-align-attribute/
+    "align",
   ],
   ol: [
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ol#compact
