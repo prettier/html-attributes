@@ -67,11 +67,16 @@ type HtmlTags =
   | 'slot'
   | 'source'
   | 'style'
+  | 'table'
+  | 'tbody'
   | 'td'
   | 'template'
   | 'textarea'
+  | 'tfoot'
   | 'th'
+  | 'thead'
   | 'time'
+  | 'tr'
   | 'track'
   | 'video';
 

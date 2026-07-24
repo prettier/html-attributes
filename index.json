@@ -490,10 +490,39 @@
     "media",
     "type"
   ],
+  "table": [
+    "align",
+    "bgcolor",
+    "border",
+    "cellpadding",
+    "cellspacing",
+    "frame",
+    "rules",
+    "summary",
+    "width"
+  ],
+  "tbody": [
+    "align",
+    "bgcolor",
+    "char",
+    "charoff",
+    "valign"
+  ],
   "td": [
+    "abbr",
+    "align",
+    "axis",
+    "bgcolor",
+    "char",
+    "charoff",
     "colspan",
     "headers",
-    "rowspan"
+    "height",
+    "nowrap",
+    "rowspan",
+    "scope",
+    "valign",
+    "width"
   ],
   "template": [
     "shadowrootclonable",
@@ -518,15 +547,45 @@
     "rows",
     "wrap"
   ],
+  "tfoot": [
+    "align",
+    "bgcolor",
+    "char",
+    "charoff",
+    "valign"
+  ],
   "th": [
     "abbr",
+    "align",
+    "axis",
+    "bgcolor",
+    "char",
+    "charoff",
     "colspan",
     "headers",
+    "height",
+    "nowrap",
     "rowspan",
-    "scope"
+    "scope",
+    "valign",
+    "width"
+  ],
+  "thead": [
+    "align",
+    "bgcolor",
+    "char",
+    "charoff",
+    "valign"
   ],
   "time": [
     "datetime"
+  ],
+  "tr": [
+    "align",
+    "bgcolor",
+    "char",
+    "charoff",
+    "valign"
   ],
   "track": [
     "default",

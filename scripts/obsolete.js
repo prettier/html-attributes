@@ -1,3 +1,86 @@
+const table = {
+  table: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table#deprecated_attributes
+    "align",
+    "bgcolor",
+    "border",
+    "cellpadding",
+    "cellspacing",
+    "frame",
+    "rules",
+    "summary",
+    "width",
+  ],
+
+  tbody: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/tbody#deprecated_attributes
+    "align",
+    "bgcolor",
+    "char",
+    "charoff",
+    "valign",
+  ],
+
+  td: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/td#deprecated_attributes
+    "abbr",
+    "align",
+    "axis",
+    "bgcolor",
+    "char",
+    "charoff",
+    "height",
+    "scope",
+    "valign",
+    "width",
+
+    // https://www.geeksforgeeks.org/html/html-td-nowrap-attribute/
+    "nowrap",
+  ],
+
+  tfoot: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/tfoot#deprecated_attributes
+    "align",
+    "bgcolor",
+    "char",
+    "charoff",
+    "valign",
+  ],
+
+  th: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/th#deprecated_attributes
+    "align",
+    "axis",
+    "bgcolor",
+    "char",
+    "charoff",
+    "height",
+    "valign",
+    "width",
+
+    // https://www.geeksforgeeks.org/html/html-th-nowrap-attribute/
+    "nowrap",
+  ],
+
+  thead: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/thead#deprecated_attributes
+    "align",
+    "bgcolor",
+    "char",
+    "charoff",
+    "valign",
+  ],
+
+  tr: [
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/tr#deprecated_attributes
+    "align",
+    "bgcolor",
+    "char",
+    "charoff",
+    "valign",
+  ],
+};
+
 export default {
   "*": [
     // https://drafts.csswg.org/css-shadow/#element-attrdef-html-global-exportparts
@@ -272,4 +355,6 @@ export default {
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/style#deprecated_attributes
     "type",
   ],
+
+  ...table,
 };
