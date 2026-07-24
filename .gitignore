@@ -3,3 +3,6 @@ yarn.lock
 .cache
 yarn-error.log
 coverage
+global.json
+element.json
+index.d.ts
