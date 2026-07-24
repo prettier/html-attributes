@@ -156,13 +156,19 @@
     "target"
   ],
   "iframe": [
+    "align",
     "allow",
     "allowfullscreen",
+    "frameborder",
     "height",
     "loading",
+    "longdesc",
+    "marginheight",
+    "marginwidth",
     "name",
     "referrerpolicy",
     "sandbox",
+    "scrolling",
     "src",
     "srcdoc",
     "width"
