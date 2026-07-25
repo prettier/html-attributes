@@ -1,6 +1,6 @@
 {
   "name": "@prettier/html-attributes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "List of HTML attributes.",
   "license": "MIT",
   "repository": "prettier/html-attributes",
